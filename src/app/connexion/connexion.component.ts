@@ -32,12 +32,9 @@ export class ConnexionComponent implements OnInit {
     }
     console.log(this.nom.value);
     console.log(this.students);
-    this.http.post('http://localhost:3000', this.students).subscribe(
-      // () =>{
-      // Ajouter valeur de redirection
-      // this.router.navigateByUrl('/')
-    // }
-    )
+    this.http.post('http://localhost:3000', this.students).subscribe(() =>{
+      this.router.navigateByUrl('/app')
+    })
     return this.students
   }
 

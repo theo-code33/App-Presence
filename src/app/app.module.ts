@@ -7,12 +7,14 @@ import { ButtonComponent } from './button/button.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PageAppComponent } from './page-app/page-app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ButtonComponent,
     ConnexionComponent,
+    PageAppComponent,
   ],
   imports: [
     BrowserModule,

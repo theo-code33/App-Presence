@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http'
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-connexion',
   templateUrl: './connexion.component.html',
@@ -13,7 +15,7 @@ export class ConnexionComponent implements OnInit {
   prenom = new FormControl('')
 
   // intégrer les valeurs des input sous forme de tableau dans une variable student
-  student : any[] =[]
+  students : any[] =[]
   
   postValue() {
     if(this.nom.value == ''){
@@ -21,7 +23,7 @@ export class ConnexionComponent implements OnInit {
     }else if(this.prenom.value == ''){
       alert('taper votre prénom')
     }else{
-      this.student.push({
+      this.students.push({
         nom: this.nom.value,
         prenom: this.prenom.value
       })
@@ -29,14 +31,19 @@ export class ConnexionComponent implements OnInit {
       this.prenom.reset()
     }
     console.log(this.nom.value);
-    console.log(this.student);
-    return this.student
+    console.log(this.students);
+    this.http.post('http://localhost:3000', this.students).subscribe(
+      // () =>{
+      // Ajouter valeur de redirection
+      // this.router.navigateByUrl('/')
+    // }
+    )
+    return this.students
   }
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router:Router) { }
 
   ngOnInit(): void {
-
   }
 
 }

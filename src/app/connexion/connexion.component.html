@@ -9,6 +9,6 @@
     <app-button-connexion (click)='postValue()'></app-button-connexion>
     <p>{{nom.value}}</p>
     <p>{{prenom.value}}</p>
-    <h2 *ngFor='let studentData of student'>nom : {{studentData.nom}}</h2>
-    <h2 *ngFor='let studentData of student'>prénom : {{studentData.prenom}}</h2>
+    <h2 *ngFor='let studentData of students'>nom : {{studentData.nom}}</h2>
+    <h2 *ngFor='let studentData of students'>prénom : {{studentData.prenom}}</h2>
 </form>

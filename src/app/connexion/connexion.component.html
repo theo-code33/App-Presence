@@ -1,14 +1,25 @@
-<form>
-    <select name="selectClass" id="selectClass">
-        <option value="B1-dev-web">B1 Dev Web</option>
-        <option value="B1-cpd">B1 Chargé de Projet</option>
-        <option value="B2-cpd">B2 Chargé de Projet</option>
-    </select>
-    <input type="text" placeholder="Nom" [formControl]="nom">
-    <input type="text" placeholder="Prénom" [formControl]="prenom">
-    <app-button-connexion (click)='postValue()'></app-button-connexion>
-    <p>{{nom.value}}</p>
-    <p>{{prenom.value}}</p>
-    <h2 *ngFor='let studentData of students'>nom : {{studentData.nom}}</h2>
-    <h2 *ngFor='let studentData of students'>prénom : {{studentData.prenom}}</h2>
-</form>
+<div class="container">
+    <div class="purple">
+        <h1>Pointer Class</h1>
+    </div>
+    <form>
+        <h2>Identifiez-vous</h2>
+        <div class="column">
+            <label for="selectClass">Choisissez votre classe</label>
+            <select name="selectClass" id="selectClass">
+                <option value="B1-dev-web">B1 Dev Web</option>
+                <option value="B1-cpd">B1 Chargé de Projet</option>
+                <option value="B2-cpd">B2 Chargé de Projet</option>
+            </select>
+        </div>
+        <div class="column">
+            <label for="nom">Rentrez votre Nom</label>
+            <input type="text" name="nom" placeholder="Nom" [formControl]="nom">
+        </div>
+        <div class="column">
+            <label for="prenom">Rentrez votre Prénom</label>
+            <input type="text" name="prenom" placeholder="Prénom" [formControl]="prenom">
+        </div>
+        <app-button-connexion (click)='postValue()'></app-button-connexion>
+    </form>
+</div>

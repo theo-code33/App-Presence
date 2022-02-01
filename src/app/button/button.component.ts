@@ -1,14 +1,11 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-button',
+  selector: 'app-button-connexion',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ButtonComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {}

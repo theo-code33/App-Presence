@@ -1,5 +1,14 @@
-<select name="selectClass" id="selectClass">
-    <option value="B1-dev-web">B1 Dev Web</option>
-    <option value="B1-cpd">B1 Chargé de Projet</option>
-    <option value="B2-cpd">B2 Chargé de Projet</option>
-</select>
+<form>
+    <select name="selectClass" id="selectClass">
+        <option value="B1-dev-web">B1 Dev Web</option>
+        <option value="B1-cpd">B1 Chargé de Projet</option>
+        <option value="B2-cpd">B2 Chargé de Projet</option>
+    </select>
+    <input type="text" placeholder="Nom" [formControl]="nom">
+    <input type="text" placeholder="Prénom" [formControl]="prenom">
+    <app-button-connexion (click)='postValue()'></app-button-connexion>
+    <p>{{nom.value}}</p>
+    <p>{{prenom.value}}</p>
+    <h2 *ngFor='let studentData of student'>nom : {{studentData.nom}}</h2>
+    <h2 *ngFor='let studentData of student'>prénom : {{studentData.prenom}}</h2>
+</form>

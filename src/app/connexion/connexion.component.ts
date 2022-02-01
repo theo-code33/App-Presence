@@ -32,9 +32,11 @@ export class ConnexionComponent implements OnInit {
     }
     console.log(this.nom.value);
     console.log(this.students);
-    this.http.post('http://localhost:3000', this.students).subscribe(() =>{
-      this.router.navigateByUrl('http://localhost:4200/app')
-    })
+    this.http.post('http://localhost:3000', this.students).subscribe(
+      //() =>{
+      //this.router.navigate(['app-page-app'], {relativeTo: this.route})
+    //}
+    )
     return this.students
   }
 

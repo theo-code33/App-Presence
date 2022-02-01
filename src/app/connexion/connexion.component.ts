@@ -33,7 +33,7 @@ export class ConnexionComponent implements OnInit {
     console.log(this.nom.value);
     console.log(this.students);
     this.http.post('http://localhost:3000', this.students).subscribe(() =>{
-      this.router.navigateByUrl('/app')
+      this.router.navigateByUrl('http://localhost:4200/app')
     })
     return this.students
   }

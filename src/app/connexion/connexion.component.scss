@@ -41,12 +41,13 @@ form{
     }
     select{
         -webkit-appearance: none;
-        width: 370px;
+        width: 380px;
         height: 60px;
         border-radius: 6px;
         border: 2px solid #8C8C8C;
         font-size: 1.7em;
         cursor: pointer;
+        padding-left: 10px;
     }
     input{
         width: 370px;
@@ -54,7 +55,7 @@ form{
         border-radius: 6px;
         border:2px solid #8C8C8C;
         font-size: 2em;
-        text-align: center;
+        padding-left: 10px;
     }
     .column{
         display: flex;

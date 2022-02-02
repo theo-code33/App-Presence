@@ -8,12 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageAppComponent implements OnInit {
 
+  dataStudents!:any
+
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.http.get('http://localhost:3000/students').subscribe(data =>{
       console.log(data)
+      this.dataStudents = data
     })
-  }
+  };
+  
 
 }

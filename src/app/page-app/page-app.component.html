@@ -4,7 +4,8 @@
             <!-- changer le H1 par la valeur de l'input select -->
             <h1>B1 Développeur Web</h1>
             <div class="nomPrenom">
-                <h3>Dupont</h3>
+                <h3>Dupont
+                </h3>
                 <!-- changer le H3 par la valeur de l'input text 'prenom' -->
                 <h3>Jean</h3>
             </div>
@@ -23,49 +24,10 @@
         </div>
     </section>
     <section class="students">
-        <div class="studentItem">
-            <p>Jean (moi)</p>
-            <p>Dupont</p>
+        <div *ngFor="let studentItem of dataStudents.reverse()" class="studentItem">
+            <p>{{studentItem[0].nom | uppercase}}</p>
+            <p>{{studentItem[0].prenom | titlecase}}</p>
         </div>
-        <div class="studentItem">
-            <p>Jean</p>
-            <p>Dupont</p>
-        </div>
-        <div class="studentItem">
-            <p>Jean</p>
-            <p>Dupont</p>
-        </div>
-        <div class="studentItem">
-            <p>Jean</p>
-            <p>Dupont</p>
-        </div>
-        <div class="studentItem">
-            <p>Jean</p>
-            <p>Dupont</p>
-        </div>
-        <div class="studentItem">
-            <p>Jean</p>
-            <p>Dupont</p>
-        </div>
-        <div class="studentItem">
-            <p>Jean</p>
-            <p>Dupont</p>
-        </div>
-        <div class="studentItem">
-            <p>Jean</p>
-            <p>Dupont</p>
-        </div>
-        <div class="studentItem">
-            <p>Jean</p>
-            <p>Dupont</p>
-        </div>
-        <div class="studentItem">
-            <p>Jean</p>
-            <p>Dupont</p>
-        </div>
-        <div class="studentItem">
-            <p>Jean</p>
-            <p>Dupont</p>
-        </div>
+        
     </section>
 </div>

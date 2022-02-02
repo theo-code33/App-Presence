@@ -11,31 +11,31 @@ import { Router } from '@angular/router';
 export class ConnexionComponent implements OnInit {
 
   // récupération des valeurs des inputs
+  select = new FormControl('')
   nom = new FormControl('')
   prenom = new FormControl('')
 
-  // intégrer les valeurs des input sous forme de tableau dans une variable student
-  students : any[] =[]
+  
+  
   
   postValue() {
-    if(this.nom.value == ''){
+    if(this.select.value == 'selection'){
+      alert('Choisissez votre classe')
+      return
+    }else if(this.nom.value == ''){
       alert('taper votre nom')
+      return
     }else if(this.prenom.value == ''){
       alert('taper votre prénom')
-    }else{
-      this.students.push({
-        nom: this.nom.value,
-        prenom: this.prenom.value
-      })
-      this.nom.reset()
-      this.prenom.reset()
+      return
     }
-    console.log(this.nom.value);
-    console.log(this.students);
-    this.http.post('http://localhost:3000', this.students).subscribe(() =>{
+    console.log(this.select.value);
+    this.http.post('http://localhost:3000', {
+      nom: this.nom.value,
+      prenom: this.prenom.value
+    }).subscribe(() =>{
       this.router.navigateByUrl("/app")
     })
-    return this.students
   }
 
   constructor(private http: HttpClient, private router:Router) { }

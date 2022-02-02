@@ -6,7 +6,7 @@
         <h2>Identifiez-vous</h2>
         <div class="column">
             <label for="selectClass">Choisissez votre classe</label>
-            <select name="selectClass" id="selectClass">
+            <select name="selectClass" id="selectClass" [formControl]="select">
                 <option value="selection">--Sélectionner votre classe--</option>
                 <option value="B1-dev-web">B1 Dev Web</option>
                 <option value="B1-cpd">B1 Chargé de Projet</option>

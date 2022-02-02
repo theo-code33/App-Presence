@@ -16,7 +16,7 @@
     <section class="time">
         <div>
             <p>Il est :</p>
-            <h1>11 : 50</h1>
+            <h1>{{myDate | date:'mediumTime' : 'IST'}}</h1>
         </div>
         <div>
             <p>Il reste :</p>
@@ -25,8 +25,8 @@
     </section>
     <section class="students">
         <div *ngFor="let studentItem of dataStudents.reverse()" class="studentItem">
-            <p>{{studentItem[0].nom | uppercase}}</p>
-            <p>{{studentItem[0].prenom | titlecase}}</p>
+            <p>{{studentItem.nom | uppercase}}</p>
+            <p>{{studentItem.prenom | titlecase}}</p>
         </div>
         
     </section>

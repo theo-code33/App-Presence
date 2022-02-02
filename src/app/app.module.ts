@@ -8,6 +8,7 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PageAppComponent } from './page-app/page-app.component';
+import { PageAdminComponent } from './page-admin/page-admin.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { PageAppComponent } from './page-app/page-app.component';
     ButtonComponent,
     ConnexionComponent,
     PageAppComponent,
+    PageAdminComponent,
   ],
   imports: [
     BrowserModule,

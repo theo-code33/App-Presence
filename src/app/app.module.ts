@@ -11,6 +11,7 @@ import { PageAppComponent } from './page-app/page-app.component';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import { MinuteSecondsPipe } from './page-app/minute-seconds.pipe';
+import { EndComponent } from './end/end.component';
 
 // the second parameter 'fr' is optional
 registerLocaleData(localeFr, 'fr');
@@ -21,6 +22,7 @@ registerLocaleData(localeFr, 'fr');
     ConnexionComponent,
     PageAppComponent,
     MinuteSecondsPipe,
+    EndComponent,
   ],
   imports: [
     BrowserModule,

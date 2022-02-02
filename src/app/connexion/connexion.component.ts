@@ -30,10 +30,11 @@ export class ConnexionComponent implements OnInit {
       return
     }
     console.log(this.select.value);
-    this.http.post('http://localhost:3000', {
+    this.http.post('http://localhost:3000/', {
       nom: this.nom.value,
       prenom: this.prenom.value
-    }).subscribe(() =>{
+    }).subscribe((loginResult: any) =>{
+      localStorage.setItem('id', loginResult.id)
       this.router.navigateByUrl("/app")
     })
   }

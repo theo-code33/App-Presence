@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,13 +8,19 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PageAppComponent } from './page-app/page-app.component';
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+import { MinuteSecondsPipe } from './page-app/minute-seconds.pipe';
 
+// the second parameter 'fr' is optional
+registerLocaleData(localeFr, 'fr');
 @NgModule({
   declarations: [
     AppComponent,
     ButtonComponent,
     ConnexionComponent,
     PageAppComponent,
+    MinuteSecondsPipe,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +28,7 @@ import { PageAppComponent } from './page-app/page-app.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{provide: LOCALE_ID, useValue: 'fr' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

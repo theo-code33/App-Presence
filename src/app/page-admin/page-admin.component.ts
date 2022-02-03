@@ -9,11 +9,14 @@ import { Router } from '@angular/router';
 })
 export class PageAdminComponent implements OnInit {
 
+  nameStudent!:any
+
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
     this.http.get('http://localhost:3000/students').subscribe(data=>{
       console.log(data)
+      this.nameStudent = data
       this.router.navigateByUrl("/admin")
     })
   }

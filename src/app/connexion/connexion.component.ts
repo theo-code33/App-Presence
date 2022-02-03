@@ -16,7 +16,7 @@ export class ConnexionComponent implements OnInit {
 
   // intégrer les valeurs des input sous forme de tableau dans une variable student
   students : any[] =[]
-  
+  nameStudent!:any
   postValue() {
     if(this.nom.value == ''){
       alert('taper votre nom')
@@ -36,6 +36,14 @@ export class ConnexionComponent implements OnInit {
       this.router.navigateByUrl("/app")
     })
     return this.students
+  }
+
+  changeTo() {
+    this.http.get('http://localhost:3000/students').subscribe(data=>{
+      console.log(data)
+      this.nameStudent = data
+      this.router.navigateByUrl("/admin-connect")
+    })
   }
 
   constructor(private http: HttpClient, private router:Router) { }

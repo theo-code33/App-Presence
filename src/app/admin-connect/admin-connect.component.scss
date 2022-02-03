@@ -1,0 +1,42 @@
+.connect{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &-input{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: 10px;
+        label{
+            font-family: sans-serif;
+            color: #7B61FF;
+        }
+        input{
+            height: 30px;
+            font-size: 1.3em;
+        }
+    }
+    h1{
+        color: #7B61FF;
+        font-family: sans-serif;
+    }
+    button{
+        background-color: #7B61FF;
+        box-shadow: none;
+        border: none;
+        box-sizing: border-box;
+        height: 80px;
+        width: 200px;
+        border-radius: 50px;
+        color: #fff;
+        font-size: 20px;
+        &:hover{
+            transition:.3s all;
+            color: #7B61FF;
+            background-color: transparent;
+            border: 2px solid #7B61FF;
+        }
+    }
+}

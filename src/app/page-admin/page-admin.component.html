@@ -1,13 +1,14 @@
 <div class="container">
+    <h1>Classe</h1>
     <p>Vous êtes administrateur</p>
     <table>
         <thead>
-            <th>Les élèves présents dans votre cours</th>
+            <th>Les élèves présents dans votre cours : </th>
         </thead>
         <tbody>
-            <tr>
-                <td>nom élève</td>
-                <td>prénom élève</td>
+            <tr *ngFor="let student of nameStudent">
+                <td>{{student[0].prenom}}</td>
+                <td>{{student[0].nom}}</td>
             </tr>
         </tbody>
     </table>

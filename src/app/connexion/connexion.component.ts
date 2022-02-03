@@ -15,9 +15,9 @@ export class ConnexionComponent implements OnInit {
   nom = new FormControl('')
   prenom = new FormControl('')
 
-  
-  
-  
+  // intégrer les valeurs des input sous forme de tableau dans une variable student
+  students : any[] =[]
+  nameStudent!:any
   postValue() {
     if(this.select.value == 'selection'){
       alert('Choisissez votre classe')
@@ -36,6 +36,14 @@ export class ConnexionComponent implements OnInit {
     }).subscribe((loginResult: any) =>{
       localStorage.setItem('id', loginResult.id)
       this.router.navigateByUrl("/app")
+    })
+  }
+
+  changeTo() {
+    this.http.get('http://localhost:3000/students').subscribe(data=>{
+      console.log(data)
+      this.nameStudent = data
+      this.router.navigateByUrl("/admin-connect")
     })
   }
 

@@ -1,0 +1,12 @@
+<div class="connect">
+    <h1>Identifiez-vous</h1>
+    <div class="connect-input">
+        <label for="identifiant">Votre identifiant administrateur :</label>
+        <input type="text" name="identifiant" placeholder="Identifiant" [formControl]='identifiant'>
+    </div>
+    <div class="connect-input">
+        <label for="password">Votre mot de passe administrateur :</label>
+        <input type="password" name="password" placeholder="Mot de passe" [formControl]='password'>
+    </div>
+    <button (click)="redirectTo()">SE CONNECTER</button>
+</div>

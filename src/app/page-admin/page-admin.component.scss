@@ -1,3 +1,61 @@
-td{
-    border: 2px solid black;
+.container{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+.contain-tableau{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.tableau{
+    width: 30%;
+    align-self: center;
+    border-spacing: 0px;
+    .student-prenom, .student-nom{
+        width: 50%;
+        border: 1px solid #8C8C8C;
+        div{
+            margin: 4px;
+        }
+    }
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    button{
+        margin-right: 10px;
+        height: 40px;
+        width: 100px;
+        align-self: center;
+        background-color: #7B61FF;
+        box-shadow: none;
+        border: none;
+        border-radius: 20px;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+.name-classe{
+    margin-left: 10px;
+    color: #7B61FF;
+}
+.student-here{
+    color: #7B61FF;
+}
+
+.download{
+    width:150px;
+    height: 50px;
+    align-self: center;
+    margin-top: 30px;
+    background-color: #7B61FF;
+    box-shadow: none;
+    border: none;
+    border-radius: 40px;
+    color: #fff;
+    cursor: pointer;
 }

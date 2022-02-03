@@ -17,6 +17,8 @@ import { AdminConnectComponent } from './admin-connect/admin-connect.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatSelectModule } from "@angular/material/select";
+import { PageAppB1CpdComponent } from './page-app-b1-cpd/page-app-b1-cpd.component';
+import { PageAppB2CpdComponent } from './page-app-b2-cpd/page-app-b2-cpd.component';
 
 
 // the second parameter 'fr' is optional
@@ -31,6 +33,8 @@ registerLocaleData(localeFr, 'fr');
     EndComponent,
     PageAdminComponent,
     AdminConnectComponent,
+    PageAppB1CpdComponent,
+    PageAppB2CpdComponent,
   ],
   imports: [
     BrowserModule,

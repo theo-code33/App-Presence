@@ -16,9 +16,9 @@ export class ConnexionComponent implements OnInit {
   prenom = new FormControl('')
 
   classes: any[] = [
-    {value: 'B1-dev-web', viewValue: 'B1 Développeur Web'},
-    {value: 'B1-cpd', viewValue: 'B1 Chargé de Projet'},
-    {value: 'B2-cpd', viewValue: 'B2 Chargé de Projet'},
+    {value: 'B1-developpeur-web', viewValue: 'B1 Développeur Web'},
+    {value: 'B1-charge-projet-digital', viewValue: 'B1 Chargé de Projet'},
+    {value: 'B2-charge-projet-digital', viewValue: 'B2 Chargé de Projet'},
   ];
 
   // intégrer les valeurs des input sous forme de tableau dans une variable student
@@ -42,7 +42,7 @@ export class ConnexionComponent implements OnInit {
       prenom: this.prenom.value
     }).subscribe((loginResult: any) =>{
       localStorage.setItem('id', loginResult.id)
-      this.router.navigateByUrl("/app")
+      this.router.navigateByUrl("/app/" + this.select.value)
     })
   }
 

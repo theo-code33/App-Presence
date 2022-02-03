@@ -3,12 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-page-app',
-  templateUrl: './page-app.component.html',
-  styleUrls: ['./page-app.component.scss']
+  selector: 'app-page-app-b1-cpd',
+  templateUrl: './page-app-b1-cpd.component.html',
+  styleUrls: ['./page-app-b1-cpd.component.scss']
 })
-export class PageAppComponent implements OnInit {
-
+export class PageAppB1CpdComponent implements OnInit {
   dataStudents!:any
   myDate : any;
   timeRest : any;

@@ -9,7 +9,7 @@
             <mat-form-field appearance="fill">
                 <mat-label>Choisissez votre classe</mat-label>
                 <mat-select [formControl]="select" id="selectClass">
-                  <mat-option *ngFor="let class of classes" [value]="class.viewValue">
+                  <mat-option *ngFor="let class of classes" [value]="class.value">
                       {{class.viewValue}}
                   </mat-option>
                 </mat-select>

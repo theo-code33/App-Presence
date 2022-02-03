@@ -35,13 +35,10 @@ export class PageAppComponent implements OnInit {
         this.timeRest = new Date()
         this.timeRest.setHours(this.timeRest.getHours() + 1)
         this.timeRest.setMinutes(0)
-        this.myDate.setMinutes(59)
         this.timeRest.setMinutes(0)
         this.timeRest.setSeconds(0)
         this.countDown = this.timeRest - this.myDate
         this.countDown = this.countDown / 1000
-        console.log(this.countDown);
-        console.log(this.countDown);
       if(this.countDown <= 1){
         this.router.navigateByUrl('/end')
         clearInterval(this.stop)

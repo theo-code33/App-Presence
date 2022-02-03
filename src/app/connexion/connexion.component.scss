@@ -18,7 +18,10 @@
     h1{
         transform: skew(10deg);
         position: absolute;
+        top: 15%;
         left: 30%;
+        width: 50%;
+        line-height: 100%;
         font-size: 6em;
         color: white;
         font-family: sans-serif;
@@ -38,16 +41,6 @@ form{
     h2{
         font-family: sans-serif;
         font-size: 3em;
-    }
-    select{
-        -webkit-appearance: none;
-        width: 380px;
-        height: 60px;
-        border-radius: 6px;
-        border: 2px solid #8C8C8C;
-        font-size: 1.7em;
-        cursor: pointer;
-        padding-left: 10px;
     }
     input{
         width: 370px;

@@ -6,13 +6,24 @@
     <form>
         <h2>Identifiez-vous</h2>
         <div class="column">
-            <label for="selectClass">Choisissez votre classe</label>
-            <select name="selectClass" id="selectClass" [formControl]="select">
+            <mat-form-field appearance="fill">
+                <mat-label>Choisissez votre classe</mat-label>
+                <mat-select [formControl]="select" id="selectClass">
+                  <mat-option *ngFor="let class of classes" [value]="class.viewValue">
+                      {{class.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+
+
+
+            <!-- <label for="selectClass">Choisissez votre classe</label>
+            <select name="selectClass">
                 <option value="selection">--Sélectionner votre classe--</option>
                 <option value="B1-dev-web">B1 Dev Web</option>
                 <option value="B1-cpd">B1 Chargé de Projet</option>
                 <option value="B2-cpd">B2 Chargé de Projet</option>
-            </select>
+            </select> -->
         </div>
         <div class="column">
             <label for="nom">Rentrez votre Nom</label>

@@ -14,6 +14,10 @@ import { MinuteSecondsPipe } from './page-app/minute-seconds.pipe';
 import { EndComponent } from './end/end.component';
 import { PageAdminComponent } from './page-admin/page-admin.component';
 import { AdminConnectComponent } from './admin-connect/admin-connect.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatSelectModule } from "@angular/material/select";
+
 
 // the second parameter 'fr' is optional
 registerLocaleData(localeFr, 'fr');
@@ -32,7 +36,10 @@ registerLocaleData(localeFr, 'fr');
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [{provide: LOCALE_ID, useValue: 'fr' }],
   bootstrap: [AppComponent]

@@ -15,11 +15,17 @@ export class ConnexionComponent implements OnInit {
   nom = new FormControl('')
   prenom = new FormControl('')
 
+  classes: any[] = [
+    {value: 'B1-dev-web', viewValue: 'B1 Développeur Web'},
+    {value: 'B1-cpd', viewValue: 'B1 Chargé de Projet'},
+    {value: 'B2-cpd', viewValue: 'B2 Chargé de Projet'},
+  ];
+
   // intégrer les valeurs des input sous forme de tableau dans une variable student
   students : any[] =[]
   nameStudent!:any
   postValue() {
-    if(this.select.value == 'selection'){
+    if(this.select.value == ''){
       alert('Choisissez votre classe')
       return
     }else if(this.nom.value == ''){
@@ -31,6 +37,7 @@ export class ConnexionComponent implements OnInit {
     }
     console.log(this.select.value);
     this.http.post('http://localhost:3000/', {
+      class: this.select.value,
       nom: this.nom.value,
       prenom: this.prenom.value
     }).subscribe((loginResult: any) =>{

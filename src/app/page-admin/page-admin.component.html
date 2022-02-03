@@ -1,15 +1,27 @@
 <div class="container">
-    <h1>Classe</h1>
-    <p>Vous êtes administrateur</p>
-    <table>
-        <thead>
-            <th>Les élèves présents dans votre cours : </th>
-        </thead>
-        <tbody>
-            <tr *ngFor="let student of nameStudent">
-                <td>{{student[0].prenom}}</td>
-                <td>{{student[0].nom}}</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="header">
+        <h1 class="name-classe">Classe</h1>
+        <button (click)="returnTo()">Quitter</button>
+    </div>
+    <div id="pdfTable" class="contain-tableau" #pdfTable>
+        <h3 class="student-here">Les élèves présents dans votre cours :</h3>
+        <table class="tableau">
+            <tbody>
+                <tr *ngFor="let student of nameStudent">
+                    <td class="student-prenom">
+                        <div>
+                            {{student.prenom}}
+                        </div>
+                    </td>
+                    <td class="student-nom">
+                        <div>
+                            {{student.nom}}
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button class="download" (click)="downloadPdf()">Download PDF</button>
 </div>

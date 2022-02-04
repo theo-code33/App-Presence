@@ -1,12 +1,12 @@
 <div class="container">
     <div class="purple">
-        <h1>Pointer Class</h1>
+        <img src="../../assets/img/Pointer-Class-logo.png" alt="">
     </div>
     <p class="change-to-admin" (click)="changeTo()">Espace Administration</p>
     <form>
         <h2>Identifiez-vous</h2>
         <div class="column">
-            <mat-form-field appearance="fill">
+            <mat-form-field appearance="outline">
                 <mat-label>Choisissez votre classe</mat-label>
                 <mat-select [formControl]="select" id="selectClass">
                   <mat-option *ngFor="let class of classes" [value]="class.value">

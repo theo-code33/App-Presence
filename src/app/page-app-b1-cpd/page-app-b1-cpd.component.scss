@@ -26,18 +26,20 @@ header{
         background-color: #7B61FF;
         color: #FFF;
         font-size: 1.7em;
+        font-family: 'gill-sans-nova', sans-serif;
     }
     .infosGenerales{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
-        h1, h3{
-            font-weight: normal;
+        h1{
+            font-family: 'gill-sans-nova', sans-serif;
+            font-weight: bold;
         }
         h3{
-            font-size: 1.5
-            1.7em;
+            font-family: 'gill-sans-nova', sans-serif;
+            font-size: 1.5em;
         }
     }
 }
@@ -53,14 +55,17 @@ header{
         font-size: 7em;
         color: #7B61FF;
         margin: 50px;
+        font-family: 'gill-sans-nova', sans-serif;
     }
     h2{
         font-size: 3em;
         margin: 20px;
+        font-family: 'gill-sans-nova', sans-serif;
     }
     p{
         margin: 0;
         font-size: 1.8em;
+        font-family: 'gill-sans-nova', sans-serif;
     }
 }
 
@@ -72,7 +77,6 @@ header{
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    // overflow-y: scroll;
     box-shadow: none;
 }
 .studentItem{
@@ -94,5 +98,6 @@ header{
     p{
         margin:0;
         font-size: 1.2em;
+        font-family: 'gill-sans-nova', sans-serif;
     }
 }

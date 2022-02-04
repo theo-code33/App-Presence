@@ -10,22 +10,17 @@
 .purple{
     width: 40%;
     height: 100%;
-    background-color: #7B61FF;
+    background-color: #7b61ffa2;
     transform: skew(-10deg);
     position: absolute;
     left: -7%;
 
-    h1{
+    img{
         transform: skew(10deg);
         position: absolute;
         top: 15%;
-        left: 30%;
-        width: 50%;
-        line-height: 100%;
-        font-size: 6em;
-        color: white;
-        font-family: sans-serif;
-        font-weight: normal;
+        left: 20%;
+        width: 70%;
     }
 }
 form{
@@ -39,8 +34,9 @@ form{
     top: 8%;
     right: 5%;
     h2{
-        font-family: sans-serif;
+        font-family: 'gill-sans-nova', sans-serif;
         font-size: 3em;
+        font-weight: bold;
     }
     input{
         width: 370px;
@@ -49,13 +45,14 @@ form{
         border:2px solid #8C8C8C;
         font-size: 2em;
         padding-left: 10px;
+        font-family: 'gill-sans-nova', sans-serif;
     }
     .column{
         display: flex;
         flex-direction: column;
 
         label{
-            font-family: sans-serif;
+            font-family: 'gill-sans-nova', sans-serif;
             margin-bottom: 10px;
             color: #7B61FF;
         }

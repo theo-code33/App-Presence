@@ -21,6 +21,7 @@ export class PageAdminComponent implements OnInit {
     {value: 'B1-developpeur-web', viewValue: 'B1 Développeur Web'},
     {value: 'B1-charge-projet-digital', viewValue: 'B1 Chargé de Projet'},
     {value: 'B2-charge-projet-digital', viewValue: 'B2 Chargé de Projet'},
+    {value: 'All-classes', viewValue: 'All Classes'}
   ];
 
   constructor(private http: HttpClient, private router: Router ) { }

@@ -9,8 +9,8 @@
     </mat-form-field>
 
     <div class="header">
-        <div *ngFor="let class of classes">
-            <h1 class="name-classe">Classe : {{class.viewValue}}</h1>
+        <div>
+            <h1 class="name-classe">Classe : {{select.value}}</h1>
         </div>
         <button (click)="returnTo()">Quitter</button>
     </div>

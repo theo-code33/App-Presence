@@ -1,8 +1,21 @@
 <div class="container">
+    <mat-form-field appearance="fill">
+        <mat-label>Choisissez votre classe</mat-label>
+        <mat-select (selectionChange)="change()" [formControl]="select" id="selectClass">
+          <mat-option *ngFor="let class of classes" [value]="class.value">
+              {{class.viewValue}}
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+
     <div class="header">
-        <h1 class="name-classe">Classe</h1>
+        <div *ngFor="let class of classes">
+            <h1 class="name-classe">Classe : {{class.viewValue}}</h1>
+        </div>
         <button (click)="returnTo()">Quitter</button>
     </div>
+
+
     <div id="pdfTable" class="contain-tableau" #pdfTable>
         <h3 class="student-here">Les élèves présents dans votre cours :</h3>
         <table class="tableau">

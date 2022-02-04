@@ -34,8 +34,9 @@ form{
     top: 8%;
     right: 5%;
     h2{
-        font-family: sans-serif;
+        font-family: 'gill-sans-nova', sans-serif;
         font-size: 3em;
+        font-weight: bold;
     }
     input{
         width: 370px;
@@ -44,13 +45,14 @@ form{
         border:2px solid #8C8C8C;
         font-size: 2em;
         padding-left: 10px;
+        font-family: 'gill-sans-nova', sans-serif;
     }
     .column{
         display: flex;
         flex-direction: column;
 
         label{
-            font-family: sans-serif;
+            font-family: 'gill-sans-nova', sans-serif;
             margin-bottom: 10px;
             color: #7B61FF;
         }
